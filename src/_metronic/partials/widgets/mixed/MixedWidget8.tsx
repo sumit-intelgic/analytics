@@ -47,9 +47,9 @@ const MixedWidget8: FC<Props> = ({className, chartColor, chartHeight, dropdownTy
       {/* begin::Beader */}
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Projects</span>
+          <span className='card-label fw-bold fs-3 mb-1'>Jobs</span>
 
-          <span className='text-muted fw-semibold fs-7'>Success Rate</span>
+          <span className='text-muted fw-semibold fs-7'>Success Rate (Last 7 Days)</span>
         </h3>
 
         <div className='card-toolbar'>
@@ -98,9 +98,9 @@ const MixedWidget8: FC<Props> = ({className, chartColor, chartHeight, dropdownTy
               {/* begin::Title */}
               <div>
                 <a href='#' className='fs-6 text-gray-800 text-hover-primary fw-bold'>
-                  Project #1
+                  MDI Generate Files
                 </a>
-                <div className='fs-7 text-muted fw-semibold mt-1'>Ricky Hunt, Sandra Trepp</div>
+                {/* <div className='fs-7 text-muted fw-semibold mt-1'>Ricky Hunt, Sandra Trepp</div> */}
               </div>
               {/* end::Title */}
             </div>
@@ -131,9 +131,9 @@ const MixedWidget8: FC<Props> = ({className, chartColor, chartHeight, dropdownTy
               {/* begin::Title */}
               <div>
                 <a href='#' className='fs-6 text-gray-800 text-hover-primary fw-bold'>
-                  Project #2
+                  Rouse - Daily
                 </a>
-                <div className='fs-7 text-muted fw-semibold mt-1'>PitStop Emails</div>
+                {/* <div className='fs-7 text-muted fw-semibold mt-1'>PitStop Emails</div> */}
               </div>
               {/* end::Title */}
             </div>
@@ -141,6 +141,74 @@ const MixedWidget8: FC<Props> = ({className, chartColor, chartHeight, dropdownTy
 
             {/* begin::Label */}
             <div className='badge badge-light fw-semibold py-4 px-3'>85%</div>
+            {/* end::Label */}
+          </div>
+          {/* end::Item */}
+
+          {/* begin::Item */}
+          <div className='d-flex flex-stack mb-5'>
+            {/* begin::Section */}
+            <div className='d-flex align-items-center me-2'>
+              {/* begin::Symbol */}
+              <div className='symbol symbol-50px me-3'>
+                <div className='symbol-label bg-light'>
+                  <img
+                    src={toAbsoluteUrl('media/svg/brand-logos/vimeo.svg')}
+                    alt=''
+                    className='h-50'
+                  />
+                </div>
+              </div>
+              {/* end::Symbol */}
+
+              {/* begin::Title */}
+              <div className='py-1'>
+                <a href='#' className='fs-6 text-gray-800 text-hover-primary fw-bold'>
+                  AX_Prod_Import-Phase2
+                </a>
+
+                {/* <div className='fs-7 text-muted fw-semibold mt-1'>KT.com</div> */}
+              </div>
+              {/* end::Title */}
+            </div>
+            {/* end::Section */}
+
+            {/* begin::Label */}
+            <div className='badge badge-light fw-semibold py-4 px-3'>70%</div>
+            {/* end::Label */}
+          </div>
+          {/* end::Item */}
+
+          {/* begin::Item */}
+          <div className='d-flex flex-stack mb-5'>
+            {/* begin::Section */}
+            <div className='d-flex align-items-center me-2'>
+              {/* begin::Symbol */}
+              <div className='symbol symbol-50px me-3'>
+                <div className='symbol-label bg-light'>
+                  <img
+                    src={toAbsoluteUrl('media/svg/brand-logos/vimeo.svg')}
+                    alt=''
+                    className='h-50'
+                  />
+                </div>
+              </div>
+              {/* end::Symbol */}
+
+              {/* begin::Title */}
+              <div className='py-1'>
+                <a href='#' className='fs-6 text-gray-800 text-hover-primary fw-bold'>
+                  AX_Prod_Import_Daily Commissions
+                </a>
+
+                {/* <div className='fs-7 text-muted fw-semibold mt-1'>KT.com</div> */}
+              </div>
+              {/* end::Title */}
+            </div>
+            {/* end::Section */}
+
+            {/* begin::Label */}
+            <div className='badge badge-light fw-semibold py-4 px-3'>80%</div>
             {/* end::Label */}
           </div>
           {/* end::Item */}
@@ -164,17 +232,17 @@ const MixedWidget8: FC<Props> = ({className, chartColor, chartHeight, dropdownTy
               {/* begin::Title */}
               <div className='py-1'>
                 <a href='#' className='fs-6 text-gray-800 text-hover-primary fw-bold'>
-                  Project #3
+                  Ceridian Time Punch InOut - PS
                 </a>
 
-                <div className='fs-7 text-muted fw-semibold mt-1'>KT.com</div>
+                {/* <div className='fs-7 text-muted fw-semibold mt-1'>KT.com</div> */}
               </div>
               {/* end::Title */}
             </div>
             {/* end::Section */}
 
             {/* begin::Label */}
-            <div className='badge badge-light fw-semibold py-4 px-3'>70%</div>
+            <div className='badge badge-light fw-semibold py-4 px-3'>85%</div>
             {/* end::Label */}
           </div>
           {/* end::Item */}
@@ -195,8 +263,8 @@ const chart1Options = (chartColor: string, chartHeight: string): ApexOptions => 
   return {
     series: [
       {
-        name: 'Net Profit',
-        data: [30, 30, 60, 25, 25, 40],
+        name: 'Success Rate',
+        data: [90, 85, 70, 80, 85],
       },
     ],
     chart: {
@@ -245,7 +313,7 @@ const chart1Options = (chartColor: string, chartHeight: string): ApexOptions => 
       colors: [baseColor],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      categories: ['MDI Generate Files', 'Rouse - Daily', 'AX_Prod_Import-Phase2', 'AX_Prod_Import_Daily Commissions', 'Ceridian Time Punch InOut - PS'],
       axisBorder: {
         show: false,
       },
@@ -279,7 +347,7 @@ const chart1Options = (chartColor: string, chartHeight: string): ApexOptions => 
     },
     yaxis: {
       min: 0,
-      max: 65,
+      max: 100,
       labels: {
         show: false,
         style: {
@@ -315,7 +383,7 @@ const chart1Options = (chartColor: string, chartHeight: string): ApexOptions => 
       },
       y: {
         formatter: function (val) {
-          return '$' + val + ' thousands'
+          return val + ' %'
         },
       },
     },

@@ -1,13 +1,22 @@
 
 import React from 'react'
-import {KTIcon} from '../../../helpers'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
+import { KTIcon } from '../../../helpers'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
 
 type Props = {
   className: string
 }
 
-const ListsWidget3: React.FC<Props> = ({className}) => {
+const ListsWidget3: React.FC<Props> = ({ className }) => {
+  const jobs = [
+    { title: 'DWExport - Night', due: 'Due in 2 Days', status: 'New', bulletColor: 'success' },
+    { title: 'GMCustChangeLog', due: 'Due in 3 Days', status: 'New', bulletColor: 'primary' },
+    { title: 'MRP DB Fix', due: 'Due in 5 Days', status: 'New', bulletColor: 'warning' },
+    { title: 'syspolicy_purge_history', due: 'Due in 2 Days', status: 'New', bulletColor: 'primary' },
+    { title: 'zzz .sp_Whoisactive', due: 'Due in 12 Days', status: 'New', bulletColor: 'danger' },
+    { title: 'MDI Generate Files', due: 'Due in 1 week', status: 'New', bulletColor: 'success' },
+    { title: 'Rouse - Daily', due: 'Due in 4 Days', status: 'New', bulletColor: 'success' },
+  ];
   return (
     <div className={`card ${className}`}>
       {/* begin::Header */}
@@ -32,135 +41,31 @@ const ListsWidget3: React.FC<Props> = ({className}) => {
       {/* begin::Body */}
       <div className='card-body pt-2'>
         {/* begin::Item */}
-        <div className='d-flex align-items-center mb-8'>
-          {/* begin::Bullet */}
-          <span className='bullet bullet-vertical h-40px bg-success'></span>
-          {/* end::Bullet */}
-          {/* begin::Checkbox */}
-          <div className='form-check form-check-custom form-check-solid mx-5'>
-            <input className='form-check-input' type='checkbox' value='' />
+        {jobs.map((job, index) => (
+          <div key={index} className='d-flex align-items-center mb-8'>
+            {/* begin::Bullet */}
+            <span className={`bullet bullet-vertical h-40px bg-${job.bulletColor}`}></span>
+            {/* end::Bullet */}
+            {/* begin::Checkbox */}
+            <div className='form-check form-check-custom form-check-solid mx-5'>
+              <input className='form-check-input' type='checkbox' value='' />
+            </div>
+            {/* end::Checkbox */}
+            {/* begin::Description */}
+            <div className='flex-grow-1'>
+              <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
+                {job.title}
+              </a>
+              <span className='text-muted fw-semibold d-block'>{job.due}</span>
+            </div>
+            {/* end::Description */}
+            <span className={`badge badge-light-${job.bulletColor} fs-8 fw-bold`}>{job.status}</span>
           </div>
-          {/* end::Checkbox */}
-          {/* begin::Description */}
-          <div className='flex-grow-1'>
-            <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
-              Job #6
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 2 Days</span>
-          </div>
-          {/* end::Description */}
-          <span className='badge badge-light-success fs-8 fw-bold'>New</span>
-        </div>
-        {/* end:Item */}
-        {/* begin::Item */}
-        <div className='d-flex align-items-center mb-8'>
-          {/* begin::Bullet */}
-          <span className='bullet bullet-vertical h-40px bg-primary'></span>
-          {/* end::Bullet */}
-          {/* begin::Checkbox */}
-          <div className='form-check form-check-custom form-check-solid mx-5'>
-            <input className='form-check-input' type='checkbox' value='' />
-          </div>
-          {/* end::Checkbox */}
-          {/* begin::Description */}
-          <div className='flex-grow-1'>
-            <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
-              Job #7
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 3 Days</span>
-          </div>
-          {/* end::Description */}
-          <span className='badge badge-light-primary fs-8 fw-bold'>New</span>
-        </div>
-        {/* end:Item */}
-        {/* begin::Item */}
-        <div className='d-flex align-items-center mb-8'>
-          {/* begin::Bullet */}
-          <span className='bullet bullet-vertical h-40px bg-warning'></span>
-          {/* end::Bullet */}
-          {/* begin::Checkbox */}
-          <div className='form-check form-check-custom form-check-solid mx-5'>
-            <input className='form-check-input' type='checkbox' value='' />
-          </div>
-          {/* end::Checkbox */}
-          {/* begin::Description */}
-          <div className='flex-grow-1'>
-            <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
-              Job #X
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 5 Days</span>
-          </div>
-          {/* end::Description */}
-          <span className='badge badge-light-warning fs-8 fw-bold'>New</span>
-        </div>
-        {/* end:Item */}
-        {/* begin::Item */}
-        <div className='d-flex align-items-center mb-8'>
-          {/* begin::Bullet */}
-          <span className='bullet bullet-vertical h-40px bg-primary'></span>
-          {/* end::Bullet */}
-          {/* begin::Checkbox */}
-          <div className='form-check form-check-custom form-check-solid mx-5'>
-            <input className='form-check-input' type='checkbox' value='' />
-          </div>
-          {/* end::Checkbox */}
-          {/* begin::Description */}
-          <div className='flex-grow-1'>
-            <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
-              Job #8
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 2 Days</span>
-          </div>
-          {/* end::Description */}
-          <span className='badge badge-light-primary fs-8 fw-bold'>New</span>
-        </div>
-        {/* end:Item */}
-        {/* begin::Item */}
-        <div className='d-flex align-items-center mb-8'>
-          {/* begin::Bullet */}
-          <span className='bullet bullet-vertical h-40px bg-danger'></span>
-          {/* end::Bullet */}
-          {/* begin::Checkbox */}
-          <div className='form-check form-check-custom form-check-solid mx-5'>
-            <input className='form-check-input' type='checkbox' value='' />
-          </div>
-          {/* end::Checkbox */}
-          {/* begin::Description */}
-          <div className='flex-grow-1'>
-            <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
-              Job #9
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 12 Days</span>
-          </div>
-          {/* end::Description */}
-          <span className='badge badge-light-danger fs-8 fw-bold'>New</span>
-        </div>
-        {/* end:Item */}
-        {/* begin::Item */}
-        <div className='d-flex align-items-center'>
-          {/* begin::Bullet */}
-          <span className='bullet bullet-vertical h-40px bg-success'></span>
-          {/* end::Bullet */}
-          {/* begin::Checkbox */}
-          <div className='form-check form-check-custom form-check-solid mx-5'>
-            <input className='form-check-input' type='checkbox' value='' />
-          </div>
-          {/* end::Checkbox */}
-          {/* begin::Description */}
-          <div className='flex-grow-1'>
-            <a href='#' className='text-gray-800 text-hover-primary fw-bold fs-6'>
-              Job #10
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 1 week</span>
-          </div>
-          {/* end::Description */}
-          <span className='badge badge-light-success fs-8 fw-bold'>New</span>
-        </div>
-        {/* end:Item */}
+        ))}
       </div>
       {/* end::Body */}
     </div>
   )
 }
 
-export {ListsWidget3}
+export { ListsWidget3 }

@@ -5,7 +5,7 @@ import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
 
 type Props = {
     className: string
-    failureRate: number[] // Pass success rate data as a prop
+    failureRate: number[] // Pass failure rate data as a prop
 }
 
 const ProjectFailureRateWidget: React.FC<Props> = ({ className, failureRate }) => {
@@ -39,7 +39,7 @@ const ProjectFailureRateWidget: React.FC<Props> = ({ className, failureRate }) =
             {/* begin::Header */}
             <div className='card-header border-0 pt-5'>
                 <h3 className='card-title align-items-start flex-column'>
-                    <span className='card-label fw-bold fs-3 mb-1'>Project Failure Rate</span>
+                    <span className='card-label fw-bold fs-3 mb-1'>Job Failure Rate</span>
                     <span className='text-muted fw-semibold fs-7'>Overview of failure rate per period</span>
                 </h3>
 
@@ -76,7 +76,7 @@ function getChartOptions(failureRate: number[]): ApexOptions {
     const labelColor = getCSSVariableValue('--bs-gray-500')
     const borderColor = getCSSVariableValue('--bs-gray-200')
     const baseColor = getCSSVariableValue('--bs-danger')
-    const lightColor = getCSSVariableValue('--bs-success-light')
+    const lightColor = getCSSVariableValue('--bs-danger') // Changed to a lighter color for better visualization
 
     return {
         series: [
@@ -87,32 +87,40 @@ function getChartOptions(failureRate: number[]): ApexOptions {
         ],
         chart: {
             fontFamily: 'inherit',
-            type: 'area',
+            type: 'bar', // Change type to 'bar'
             height: 350,
             toolbar: {
                 show: false,
             },
         },
-        plotOptions: {},
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '55%', // Adjusted column width for bar chart
+                endingShape: 'rounded',
+            },
+        },
         dataLabels: {
             enabled: false,
         },
         fill: {
-            type: 'gradient',
-            gradient: {
-                shadeIntensity: 1,
-                opacityFrom: 0.4,
-                opacityTo: 0,
-                stops: [0, 90, 100],
-            },
+            colors: [baseColor], // Use color for bars
         },
         stroke: {
-            curve: 'smooth',
-            width: 3,
+            show: true,
+            width: 2,
             colors: [baseColor],
         },
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'], // Example categories
+            categories: [
+                'DWExport - Night',
+                'GMCustChangeLog',
+                'MRP DB Fix',
+                'syspolicy_purge_history',
+                'zzz .sp_Whoisactive',
+                'MDI Generate Files',
+                'Rouse - Daily',
+            ],
             axisBorder: {
                 show: false,
             },
@@ -138,7 +146,7 @@ function getChartOptions(failureRate: number[]): ApexOptions {
                 },
             },
             title: {
-                text: 'Success Rate (%)',
+                text: 'Failure Rate (%)',
             },
         },
         tooltip: {
@@ -148,7 +156,7 @@ function getChartOptions(failureRate: number[]): ApexOptions {
                 },
             },
         },
-        colors: [lightColor],
+        colors: [lightColor], // Color for tooltip and other elements
         grid: {
             borderColor: borderColor,
             strokeDashArray: 4,

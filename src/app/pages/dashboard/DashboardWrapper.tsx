@@ -7,7 +7,6 @@ import {
   TablesWidget10,
   MixedWidget8,
   CardsWidget7,
-  CardsWidget17,
   CardsWidget20,
   ListsWidget26,
 } from '../../../_metronic/partials/widgets'
@@ -16,7 +15,8 @@ import { Content } from '../../../_metronic/layout/components/content'
 import { CurrentlyRunningWidget } from '../../../_metronic/partials/widgets/charts/CurrentlyRunningWidget'
 import { ProjectSuccessRateWidget } from '../../../_metronic/partials/widgets/charts/ProjectSuccessRateWidget'
 import { ProjectFailureRateWidget } from '../../../_metronic/partials/widgets/charts/ProjectFailureRateWidget'
-import { FailedJobsWidget } from '../../../_metronic/partials/widgets/lists/FailedJobsWidget'
+import { MiddleSection } from '../../../_metronic/partials/widgets/_new/cards/MiddleSection'
+import { TopJobsTable } from '../../../_metronic/partials/widgets/tables/TopJobsTable'
 
 const DashboardPage: FC = () => (
   <>
@@ -28,7 +28,7 @@ const DashboardPage: FC = () => (
         <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10'>
           <CardsWidget20
             className='h-md-50 mb-5 mb-xl-10'
-            description='Active Projects'
+            description='Active Jobs'
             color='#F1416C'
             img={toAbsoluteUrl('media/patterns/vector-1.png')}
           />
@@ -45,7 +45,7 @@ const DashboardPage: FC = () => (
 
         {/* begin::Col */}
         <div className='col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10'>
-          <CardsWidget17 className='h-md-50 mb-5 mb-xl-10' />
+          <MiddleSection className='h-md-50 mb-5 mb-xl-10' />
           <ListsWidget26 className='h-lg-50' />
         </div>
         {/* end::Col */}
@@ -62,17 +62,16 @@ const DashboardPage: FC = () => (
         {/* end::Col */}
       </div>
       {/* end::Row */}
-
+      <div className="row gx-5 gx-xl-10">
+        <TopJobsTable className="card-xl-stretch mb-xl-8" />
+      </div>
       {/* begin::Row */}
       <div className='row gx-5 gx-xl-10'>
         {/* begin::Col */}
-        <div className='col-xxl-9 mb-5 mb-xl-10'>
+        <div className='col-xxl-12 mb-5 mb-xl-10'>
           {/* <app-new-charts-widget8 cssclassName="h-xl-100" chartHeight="275px" [chartHeightNumber]="275"></app-new-charts-widget8> */}
           <CurrentlyRunningWidget className='card-xl-stretch mb-xl-8' />
 
-        </div>
-        <div className="col-xxl-3 mb-5 mb-xl-10">
-          <FailedJobsWidget className='card-xl-stretch mb-xl-8' />
         </div>
         {/* end::Col */}
 

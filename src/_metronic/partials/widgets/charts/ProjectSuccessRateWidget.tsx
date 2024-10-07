@@ -1,45 +1,45 @@
-import React, { useEffect, useRef } from 'react'
-import ApexCharts, { ApexOptions } from 'apexcharts'
-import { getCSSVariableValue } from '../../../assets/ts/_utils'
-import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
+import React, { useEffect, useRef } from 'react';
+import ApexCharts, { ApexOptions } from 'apexcharts';
+import { getCSSVariableValue } from '../../../assets/ts/_utils';
+import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider';
 
 type Props = {
-    className: string
-    successRate: number[] // Pass success rate data as a prop
-}
+    className: string;
+    successRate: number[]; // Pass success rate data as a prop
+};
 
 const ProjectSuccessRateWidget: React.FC<Props> = ({ className, successRate }) => {
-    const chartRef = useRef<HTMLDivElement | null>(null)
-    const { mode } = useThemeMode()
+    const chartRef = useRef<HTMLDivElement | null>(null);
+    const { mode } = useThemeMode();
 
     useEffect(() => {
         const refreshMode = () => {
             if (!chartRef.current) {
-                return
+                return;
             }
 
-            const chart = new ApexCharts(chartRef.current, getChartOptions(successRate))
+            const chart = new ApexCharts(chartRef.current, getChartOptions(successRate));
             if (chart) {
-                chart.render()
+                chart.render();
             }
 
-            return chart
-        }
-        const chart = refreshMode()
+            return chart;
+        };
+        const chart = refreshMode();
 
         return () => {
             if (chart) {
-                chart.destroy()
+                chart.destroy();
             }
-        }
-    }, [chartRef, mode, successRate])
+        };
+    }, [chartRef, mode, successRate]);
 
     return (
         <div className={`card ${className}`}>
             {/* begin::Header */}
             <div className='card-header border-0 pt-5'>
                 <h3 className='card-title align-items-start flex-column'>
-                    <span className='card-label fw-bold fs-3 mb-1'>Project Success Rate</span>
+                    <span className='card-label fw-bold fs-3 mb-1'>Job Success Rate</span>
                     <span className='text-muted fw-semibold fs-7'>Overview of success rate per period</span>
                 </h3>
 
@@ -67,16 +67,16 @@ const ProjectSuccessRateWidget: React.FC<Props> = ({ className, successRate }) =
             </div>
             {/* end::Body */}
         </div>
-    )
-}
+    );
+};
 
-export { ProjectSuccessRateWidget }
+export { ProjectSuccessRateWidget };
 
 function getChartOptions(successRate: number[]): ApexOptions {
-    const labelColor = getCSSVariableValue('--bs-gray-500')
-    const borderColor = getCSSVariableValue('--bs-gray-200')
-    const baseColor = getCSSVariableValue('--bs-success')
-    const lightColor = getCSSVariableValue('--bs-success-light')
+    const labelColor = getCSSVariableValue('--bs-gray-500');
+    const borderColor = getCSSVariableValue('--bs-gray-200');
+    const baseColor = getCSSVariableValue('--bs-success');
+    const lightColor = getCSSVariableValue('--bs-success');
 
     return {
         series: [
@@ -87,32 +87,37 @@ function getChartOptions(successRate: number[]): ApexOptions {
         ],
         chart: {
             fontFamily: 'inherit',
-            type: 'area',
+            type: 'bar', // Change to bar
             height: 350,
             toolbar: {
                 show: false,
             },
         },
-        plotOptions: {},
-        dataLabels: {
-            enabled: false,
-        },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shadeIntensity: 1,
-                opacityFrom: 0.4,
-                opacityTo: 0,
-                stops: [0, 90, 100],
+        plotOptions: {
+            bar: {
+                horizontal: false, // Change to true for horizontal bar
+                columnWidth: '55%', // Control the width of the bars
+                endingShape: 'flat', // Gives flat ending to the bars
             },
         },
+        dataLabels: {
+            enabled: true, // Enable data labels on bars
+        },
         stroke: {
-            curve: 'smooth',
-            width: 3,
-            colors: [baseColor],
+            show: true,
+            width: 2,
+            colors: ['transparent'], // No stroke color
         },
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'], // Example categories
+            categories: [
+                'DWExport - Night',
+                'GMCustChangeLog',
+                'MRP DB Fix',
+                'syspolicy_purge_history',
+                'zzz .sp_Whoisactive',
+                'MDI Generate Files',
+                'Rouse - Daily',
+            ], // Update categories as needed
             axisBorder: {
                 show: false,
             },
@@ -134,7 +139,7 @@ function getChartOptions(successRate: number[]): ApexOptions {
                     fontSize: '12px',
                 },
                 formatter: function (val) {
-                    return `${val}%`
+                    return `${val}%`;
                 },
             },
             title: {
@@ -144,7 +149,7 @@ function getChartOptions(successRate: number[]): ApexOptions {
         tooltip: {
             y: {
                 formatter: function (val) {
-                    return `${val}%`
+                    return `${val}%`;
                 },
             },
         },
@@ -159,8 +164,7 @@ function getChartOptions(successRate: number[]): ApexOptions {
             },
         },
         markers: {
-            strokeColors: baseColor,
-            strokeWidth: 3,
+            size: 0, // No markers for bar chart
         },
-    }
+    };
 }
