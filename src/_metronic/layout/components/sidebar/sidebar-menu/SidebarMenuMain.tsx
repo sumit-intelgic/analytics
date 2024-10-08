@@ -57,12 +57,13 @@ const SidebarMenuMain = () => {
       </SidebarMenuItemWithSub> */}
       <SidebarMenuItemWithSub
         to='/apps/job-management/jobs'
-        title='Jobs'
+        title='Configuration Management'
         fontIcon='bi-archive'
         icon='element-plus'
       >
-        <SidebarMenuItem to='/jobs/create' title='Create' hasBullet={true} />
-        <SidebarMenuItem to='/apps/job-management/jobs' title='Overview' hasBullet={true} />
+        {/* <SidebarMenuItem to='/jobs/create' title='Create' hasBullet={true} /> */}
+        <SidebarMenuItem to='/apps/job-management/jobs' title='Job Master' hasBullet={true} />
+        <SidebarMenuItem to='/apps/job-management/authorized-users' title='Authorized Users' hasBullet={true} />
 
       </SidebarMenuItemWithSub>
       {/* <SidebarMenuItemWithSub

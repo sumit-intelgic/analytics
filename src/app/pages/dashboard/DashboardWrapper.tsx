@@ -77,14 +77,14 @@ const DashboardPage: FC = () => (
 
         {/* begin::Col */}
         <div className='col-xxl-6 mb-5 mb-xl-10'>
-          <ProjectSuccessRateWidget className='card-xl-stretch mb-5 mb-xl-8' successRate={[20, 30 , 10, 60, 70, 45, 100]} />
+          <ProjectSuccessRateWidget className='card-xl-stretch mb-5 mb-xl-8' successRate={[90, 92 , 95, 93, 98, 90, 100]} />
           {/* <ChartsWidget8 className='card-xl-stretch mb-5 mb-xl-8' /> */}
 
         </div>
         <div className='col-xxl-6 mb-5 mb-xl-10'>
           {/* <ProjectSuccessRateWidget className='card-xl-stretch mb-5 mb-xl-8' /> */}
           {/* <ChartsWidget8 className='card-xl-stretch mb-5 mb-xl-8' /> */}
-          <ProjectFailureRateWidget className='card-xl-stretch mb-5 mb-xl-8' failureRate={[80, 70, 90, 40, 30, 55, 0]} />
+          <ProjectFailureRateWidget className='card-xl-stretch mb-5 mb-xl-8' failureRate={[80, 70, 90, 75, 70, 78, 90]} />
 
         </div>
         {/* end::Col */}

@@ -4,36 +4,17 @@ import { CustomHeaderColumn } from './columns/CustomHeaderColumn'
 import { CustomRow } from './columns/CustomRow'
 import { useQueryResponseLoading } from '../core/QueryResponseProvider'
 import { jobsColumns } from './columns/_columns'  // Changed from usersColumns to jobsColumns
-import { Job } from '../core/_models'  // Changed from Jobs to Job (singular)
+import { Email } from '../core/_models'  // Changed from Jobs to Job (singular)
 import { JobsListLoading } from '../components/loading/JobsListLoading'
 import { JobsListPagination } from '../components/pagination/JobsListPagination'
 import { KTCardBody } from '../../../../../../_metronic/helpers'
 
-const JobsTable = () => {
+const EmailsTable = () => {
   const jobs = useMemo(() => [
     {
       id: 1,
-      jobId: '1',
-      name: 'Rouse - Daily',
-      serverName: 'Server 1',
-      monitoring: true,
-      notification: true,
-      autorun: false,
-      successEmail: true,
-      threshold: 35,
-      fileCount: 25
-    },
-    {
-      id: 2,
-      jobId: '2',
-      name: 'Ceridian Time Punch InOut - PS',
-      serverName: 'Server 2',
-      monitoring: true,
-      notification: true,
-      autorun: false,
-      successEmail: true,
-      threshold: 35,
-      fileCount: 25
+      name: 'Sumit',
+      email: 'sumit.dash@intelebeellc.com',
     }
   ], [])
   const isLoading = useQueryResponseLoading()
@@ -61,7 +42,7 @@ const JobsTable = () => {
           </thead>
           <tbody className='text-gray-600 fw-bold' {...getTableBodyProps()}>
             {rows.length > 0 ? (
-              rows.map((row: Row<Job>, i) => {
+              rows.map((row: Row<Email>, i) => {
                 prepareRow(row)
                 return <CustomRow row={row} key={`row-${i}-${row.id}`} />
               })
@@ -83,4 +64,4 @@ const JobsTable = () => {
   )
 }
 
-export { JobsTable }
+export { EmailsTable }

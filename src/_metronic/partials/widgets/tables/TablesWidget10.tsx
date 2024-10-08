@@ -55,8 +55,8 @@ const TablesWidget10: FC<Props> = ({className}) => {
                   </div>
                 </th>
                 <th className='min-w-150px'>Jobs</th>
-                <th className='min-w-140px'>Details</th>
-                <th className='min-w-120px'>Status</th>
+                <th className='min-w-140px'>Threshold</th>
+                <th className='min-w-120px'>Execution Time</th>
                 <th className='min-w-100px text-end'>Actions</th>
               </tr>
             </thead>
@@ -73,26 +73,20 @@ const TablesWidget10: FC<Props> = ({className}) => {
                   <div className='d-flex align-items-center'>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-gray-900 fw-bold text-hover-primary fs-6'>
-                        Job #1
+                        DWExport - Night - UPDATED
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                        HTML, JS, ReactJS
-                      </span>
                     </div>
                   </div>
                 </td>
                 <td>
                   <a href='#' className='text-gray-900 fw-bold text-hover-primary d-block fs-6'>
-                    Intertico
+                    30 Mins
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Web, UI/UX Design
-                  </span>
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
                     <div className='d-flex flex-stack mb-2'>
-                      <span className='text-danger me-2 fs-7 fw-semibold'>+21 mins</span>
+                      <span className='text-danger me-2 fs-7 fw-semibold'>51 mins</span>
                     </div>
                     {/* <div className='progress h-6px w-100'>
                       <div
@@ -136,26 +130,20 @@ const TablesWidget10: FC<Props> = ({className}) => {
                   <div className='d-flex align-items-center'>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-gray-900 fw-bold text-hover-primary fs-6'>
-                        Job #2
+                        GMCustChangeLog
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                        C#, ASP.NET, MS SQL
-                      </span>
                     </div>
                   </div>
                 </td>
                 <td>
                   <a href='#' className='text-gray-900 fw-bold text-hover-primary d-block fs-6'>
-                    Agoda
+                    20 Mins
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Houses &amp; Hotels
-                  </span>
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
                     <div className='d-flex flex-stack mb-2'>
-                      <span className='text-danger me-2 fs-7 fw-semibold'>+5 mins</span>
+                      <span className='text-danger me-2 fs-7 fw-semibold'>25 mins</span>
                     </div>
                     {/* <div className='progress h-6px w-100'>
                       <div
@@ -199,27 +187,21 @@ const TablesWidget10: FC<Props> = ({className}) => {
                   <div className='d-flex align-items-center'>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-gray-900 fw-bold text-hover-primary fs-6'>
-                        Job #3
+                        MRP DB Fix
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                        PHP, Laravel, VueJS
-                      </span>
                     </div>
                   </div>
                 </td>
                 <td>
                   <a href='#' className='text-gray-900 fw-bold text-hover-primary d-block fs-6'>
-                    RoadGee
+                    50 Mins
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Transportation
-                  </span>
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
                     <div className='d-flex flex-stack mb-2'>
                       {/* <span className='text-muted me-2 fs-7 fw-semibold'>60%</span> */}
-                      <span className='text-danger me-2 fs-7 fw-semibold'>+20 mins</span>
+                      <span className='text-danger me-2 fs-7 fw-semibold'>60 mins</span>
                     </div>
                     {/* <div className='progress h-6px w-100'>
                       <div
@@ -263,24 +245,21 @@ const TablesWidget10: FC<Props> = ({className}) => {
                   <div className='d-flex align-items-center'>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-gray-900 fw-bold text-hover-primary fs-6'>
-                        Job #4
+                        syspolicy_purge_history
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                        Python, PostgreSQL, ReactJS
-                      </span>
                     </div>
                   </div>
                 </td>
                 <td>
                   <a href='#' className='text-gray-900 fw-bold text-hover-primary d-block fs-6'>
-                    The Hill
+                    15 Mins
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
+                  {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span> */}
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
                     <div className='d-flex flex-stack mb-2'>
-                      <span className='text-danger me-2 fs-7 fw-semibold'>+40 mins</span>
+                      <span className='text-danger me-2 fs-7 fw-semibold'>40 mins</span>
                     </div>
                     {/* <div className='progress h-6px w-100'>
                       <div
@@ -324,26 +303,20 @@ const TablesWidget10: FC<Props> = ({className}) => {
                   <div className='d-flex align-items-center'>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-gray-900 fw-bold text-hover-primary fs-6'>
-                        Job #5
+                        zzz .sp_Whoisactive
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                        HTML, JS, ReactJS
-                      </span>
                     </div>
                   </div>
                 </td>
                 <td>
                   <a href='#' className='text-gray-900 fw-bold text-hover-primary d-block fs-6'>
-                    RoadGee
+                    20 Mins
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Art Director
-                  </span>
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
                     <div className='d-flex flex-stack mb-2'>
-                      <span className='me-2 fs-7 fw-semibold text-danger'>+15 mins</span>
+                      <span className='me-2 fs-7 fw-semibold text-danger'>+35 mins</span>
                     </div>
                     {/* <div className='progress h-6px w-100'>
                       <div

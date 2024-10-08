@@ -9,19 +9,19 @@ type Props = {
 
 const ListsWidget3: React.FC<Props> = ({ className }) => {
   const jobs = [
-    { title: 'DWExport - Night', due: 'Due in 2 Days', status: 'New', bulletColor: 'success' },
-    { title: 'GMCustChangeLog', due: 'Due in 3 Days', status: 'New', bulletColor: 'primary' },
-    { title: 'MRP DB Fix', due: 'Due in 5 Days', status: 'New', bulletColor: 'warning' },
-    { title: 'syspolicy_purge_history', due: 'Due in 2 Days', status: 'New', bulletColor: 'primary' },
-    { title: 'zzz .sp_Whoisactive', due: 'Due in 12 Days', status: 'New', bulletColor: 'danger' },
-    { title: 'MDI Generate Files', due: 'Due in 1 week', status: 'New', bulletColor: 'success' },
-    { title: 'Rouse - Daily', due: 'Due in 4 Days', status: 'New', bulletColor: 'success' },
+    { title: 'DWExport - Night', due: 'Due in 2 Days', status: 'Active', bulletColor: 'success' },
+    { title: 'GMCustChangeLog', due: 'Due in 3 Days', status: 'Active', bulletColor: 'success' },
+    { title: 'MRP DB Fix', due: 'Due in 5 Days', status: 'Active', bulletColor: 'success' },
+    { title: 'syspolicy_purge_history', due: 'Due in 2 Days', status: 'Active', bulletColor: 'success' },
+    { title: 'zzz .sp_Whoisactive', due: 'Due in 12 Days', status: 'Active', bulletColor: 'success' },
+    { title: 'MDI Generate Files', due: 'Due in 1 week', status: 'Active', bulletColor: 'success' },
+    { title: 'Rouse - Daily', due: 'Due in 4 Days', status: 'Active', bulletColor: 'success' },
   ];
   return (
     <div className={`card ${className}`}>
       {/* begin::Header */}
       <div className='card-header border-0'>
-        <h3 className='card-title fw-bold text-gray-900'>New Jobs</h3>
+        <h3 className='card-title fw-bold text-gray-900'>Active Jobs</h3>
         <div className='card-toolbar'>
           {/* begin::Menu */}
           <button

@@ -1,11 +1,18 @@
 import {Route, Routes, Outlet, Navigate} from 'react-router-dom'
 import {PageLink, PageTitle} from '../../../../_metronic/layout/core'
 import {UsersListWrapper} from './users-list/JobsList'
+import { AuthUsersListWrapper } from './users-list/userList'
 
 const jobsBreadcrumbs: Array<PageLink> = [
   {
     title: 'Jobs Management',
     path: '/apps/job-management/jobs',
+    isSeparator: false,
+    isActive: false,
+  },
+  {
+    title: 'Authorized Users',
+    path: '/apps/job-management/authorized-users',
     isSeparator: false,
     isActive: false,
   },
@@ -27,6 +34,15 @@ const JobsPage = () => {
             <>
               <PageTitle breadcrumbs={jobsBreadcrumbs}>Jobs list</PageTitle>
               <UsersListWrapper />
+            </>
+          }
+        />
+        <Route
+          path='authorized-users'
+          element={
+            <>
+              <PageTitle breadcrumbs={jobsBreadcrumbs}>Authorized Users</PageTitle>
+              <AuthUsersListWrapper />
             </>
           }
         />

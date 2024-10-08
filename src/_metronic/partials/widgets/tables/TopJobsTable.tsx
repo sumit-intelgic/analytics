@@ -12,7 +12,7 @@ const TopJobsTable: FC<Props> = ({ className }) => {
             {/* begin::Header */}
             <div className='card-header border-0 pt-5'>
                 <h3 className='card-title align-items-start flex-column'>
-                    <span className='card-label fw-bold fs-3 mb-1'>Failed Jobs</span>
+                    <span className='card-label fw-bold fs-3 mb-1'>Job Running Status</span>
                     <span className='text-muted mt-1 fw-semibold fs-7'>Over 5 Jobs</span>
                 </h3>
                 <div
@@ -164,10 +164,10 @@ const TopJobsTable: FC<Props> = ({ className }) => {
                                     </span>
                                 </td>
                                 <td>
-                                    <span className="badge bg-info text-white">Failed</span>
+                                    <span className="badge bg-info text-white">Running</span>
                                 </td>
                                 <td>
-                                    <span className="badge bg-danger text-white">17</span>
+                                    <span className="badge bg-danger text-white">0</span>
                                 </td>
                                 <td>
                                     <a
@@ -203,7 +203,7 @@ const TopJobsTable: FC<Props> = ({ className }) => {
                                     <span className="badge bg-primary text-white">Pending</span>
                                 </td>
                                 <td>
-                                    <span className="badge bg-danger text-white">17</span>
+                                    <span className="badge bg-danger text-white">0</span>
                                 </td>
                                 <td>
                                     <a
@@ -241,10 +241,10 @@ const TopJobsTable: FC<Props> = ({ className }) => {
                                     </span>
                                 </td>
                                 <td>
-                                    <span className="badge bg-info text-white">Failed</span>
+                                    <span className="badge bg-success text-white">Completed</span>
                                 </td>
                                 <td>
-                                    <span className="badge bg-danger text-white">17</span>
+                                    <span className="badge bg-danger text-white">0</span>
                                 </td>
                                 <td>
                                     <a

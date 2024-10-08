@@ -29,6 +29,12 @@ export type Job = {
   fileCount?: number
 }
 
+export type Email = {
+  id?: ID,
+  name?: string,
+  email?: string
+}
+
 export type UsersQueryResponse = Response<Array<User>>
 
 export const initialUser: User = {

@@ -101,7 +101,7 @@ function getChartOptions(successRate: number[]): ApexOptions {
             },
         },
         dataLabels: {
-            enabled: true, // Enable data labels on bars
+            enabled: false, // Enable data labels on bars
         },
         stroke: {
             show: true,
