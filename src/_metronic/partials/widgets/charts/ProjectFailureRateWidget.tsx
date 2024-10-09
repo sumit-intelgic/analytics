@@ -97,7 +97,7 @@ function getChartOptions(failureRate: number[]): ApexOptions {
             bar: {
                 horizontal: false,
                 columnWidth: '55%', // Adjusted column width for bar chart
-                endingShape: 'rounded',
+                // endingShape: 'rounded',
             },
         },
         dataLabels: {

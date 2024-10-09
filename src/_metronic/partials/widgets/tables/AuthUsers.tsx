@@ -12,7 +12,7 @@ const AuthUsers: FC<Props> = ({className}) => {
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Authorized users</span>
+          <span className='card-label fw-bold fs-3 mb-1'>Notified users</span>
         </h3>
         <div
           className='card-toolbar'

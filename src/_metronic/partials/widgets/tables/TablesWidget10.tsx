@@ -57,6 +57,7 @@ const TablesWidget10: FC<Props> = ({className}) => {
                 <th className='min-w-150px'>Jobs</th>
                 <th className='min-w-140px'>Threshold</th>
                 <th className='min-w-120px'>Execution Time</th>
+                <th className='min-w-120px'>Status</th>
                 <th className='min-w-100px text-end'>Actions</th>
               </tr>
             </thead>
@@ -95,6 +96,15 @@ const TablesWidget10: FC<Props> = ({className}) => {
                         style={{width: '50%'}}
                       ></div>
                     </div> */}
+                  </div>
+                </td>
+                <td className='text-end'>
+                  <div className='d-flex flex-column w-100 me-2'>
+                    <div className='d-flex flex-stack mb-2'>
+                      <span className='badge badge-light-primary me-2 fs-7 fw-semibold'> 
+                        Executing
+                      </span>
+                    </div>
                   </div>
                 </td>
                 <td>
@@ -152,6 +162,15 @@ const TablesWidget10: FC<Props> = ({className}) => {
                         style={{width: '70%'}}
                       ></div>
                     </div> */}
+                  </div>
+                </td>
+                <td className='text-end'>
+                  <div className='d-flex flex-column w-100 me-2'>
+                    <div className='d-flex flex-stack mb-2'>
+                      <span className='badge badge-light-primary me-2 fs-7 fw-semibold'> 
+                        Executing
+                      </span>
+                    </div>
                   </div>
                 </td>
                 <td>
@@ -212,6 +231,15 @@ const TablesWidget10: FC<Props> = ({className}) => {
                     </div> */}
                   </div>
                 </td>
+                <td className='text-end'>
+                  <div className='d-flex flex-column w-100 me-2'>
+                    <div className='d-flex flex-stack mb-2'>
+                      <span className='badge badge-light-success me-2 fs-7 fw-semibold'> 
+                        Completed
+                      </span>
+                    </div>
+                  </div>
+                </td>
                 <td>
                   <div className='d-flex justify-content-end flex-shrink-0'>
                     <a
@@ -270,6 +298,15 @@ const TablesWidget10: FC<Props> = ({className}) => {
                     </div> */}
                   </div>
                 </td>
+                <td className='text-end'>
+                  <div className='d-flex flex-column w-100 me-2'>
+                    <div className='d-flex flex-stack mb-2'>
+                      <span className='badge badge-light-primary me-2 fs-7 fw-semibold'> 
+                        Executing
+                      </span>
+                    </div>
+                  </div>
+                </td>
                 <td>
                   <div className='d-flex justify-content-end flex-shrink-0'>
                     <a
@@ -325,6 +362,15 @@ const TablesWidget10: FC<Props> = ({className}) => {
                         style={{width: '90%'}}
                       ></div>
                     </div> */}
+                  </div>
+                </td>
+                <td className='text-end'>
+                  <div className='d-flex flex-column w-100 me-2'>
+                    <div className='d-flex flex-stack mb-2'>
+                      <span className='badge badge-light-success me-2 fs-7 fw-semibold'> 
+                        Completed
+                      </span>
+                    </div>
                   </div>
                 </td>
                 <td>

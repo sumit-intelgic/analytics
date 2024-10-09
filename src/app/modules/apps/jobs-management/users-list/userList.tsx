@@ -15,7 +15,7 @@ const UsersList = () => {
   return (
     <>
       <KTCard>
-        <UsersListHeader />
+        {/* <UsersListHeader /> */}
         <AuthUsers className='my-5' />
       </KTCard>
       {itemIdForUpdate !== undefined && <UserEditModal />}

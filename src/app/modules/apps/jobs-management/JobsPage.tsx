@@ -11,7 +11,7 @@ const jobsBreadcrumbs: Array<PageLink> = [
     isActive: false,
   },
   {
-    title: 'Authorized Users',
+    title: 'Notified Users',
     path: '/apps/job-management/authorized-users',
     isSeparator: false,
     isActive: false,
@@ -41,7 +41,7 @@ const JobsPage = () => {
           path='authorized-users'
           element={
             <>
-              <PageTitle breadcrumbs={jobsBreadcrumbs}>Authorized Users</PageTitle>
+              <PageTitle breadcrumbs={jobsBreadcrumbs}>Notified Users</PageTitle>
               <AuthUsersListWrapper />
             </>
           }

@@ -97,7 +97,7 @@ function getChartOptions(successRate: number[]): ApexOptions {
             bar: {
                 horizontal: false, // Change to true for horizontal bar
                 columnWidth: '55%', // Control the width of the bars
-                endingShape: 'flat', // Gives flat ending to the bars
+                // endingShape: 'flat', // Gives flat ending to the bars
             },
         },
         dataLabels: {

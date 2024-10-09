@@ -6,7 +6,7 @@ type Props = {
   className: string
   description: string
   icon: boolean
-  stats: number
+  stats: string
   labelColor: string
   textColor: string
 }
@@ -36,8 +36,8 @@ const CardsWidget7 = ({className, description, stats, labelColor, textColor}: Pr
       </div>
     </div>
     <div className='card-body d-flex flex-column justify-content-end pe-0'>
-      <span className='fs-6 fw-bolder text-gray-800 d-block mb-2'>Today’s Heroes</span>
-      <div className='symbol-group symbol-hover flex-nowrap'>
+      <span className='fs-6 fw-bolder text-gray-800 d-block mb-2'>Dummy Content</span>
+      {/* <div className='symbol-group symbol-hover flex-nowrap'>
         {items.map((item, index) => (
           <div
             className='symbol symbol-35px symbol-circle'
@@ -67,7 +67,7 @@ const CardsWidget7 = ({className, description, stats, labelColor, textColor}: Pr
             +42
           </span>
         </a>
-      </div>
+      </div> */}
     </div>
   </div>
 )

@@ -63,7 +63,7 @@ const SidebarMenuMain = () => {
       >
         {/* <SidebarMenuItem to='/jobs/create' title='Create' hasBullet={true} /> */}
         <SidebarMenuItem to='/apps/job-management/jobs' title='Job Master' hasBullet={true} />
-        <SidebarMenuItem to='/apps/job-management/authorized-users' title='Authorized Users' hasBullet={true} />
+        <SidebarMenuItem to='/apps/job-management/authorized-users' title='Notified Users' hasBullet={true} />
 
       </SidebarMenuItemWithSub>
       {/* <SidebarMenuItemWithSub
@@ -113,7 +113,7 @@ const SidebarMenuMain = () => {
         title='User management'
         fontIcon='bi-layers'
       /> */}
-      <div className='menu-item'>
+      {/* <div className='menu-item'>
         <a
           target='_blank'
           className='menu-link'
@@ -124,7 +124,7 @@ const SidebarMenuMain = () => {
           </span>
           <span className='menu-title'>Changelog {import.meta.env.VITE_APP_VERSION}</span>
         </a>
-      </div>
+      </div> */}
     </>
   )
 }

@@ -34,9 +34,9 @@ const DashboardPage: FC = () => (
           />
           <CardsWidget7
             className='h-md-50 mb-5 mb-xl-10'
-            description='Professionals'
+            description='Content'
             icon={false}
-            stats={357}
+            stats="Dummy"
             labelColor='dark'
             textColor='gray-300'
           />
